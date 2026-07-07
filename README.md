@@ -16,3 +16,17 @@ helm repo update
 ```
 
 Then run `helm search repo nerkho` to see the available charts.
+
+## Release Process
+
+Package the helm chart
+
+```bash
+helm package charts/bluesky-pds
+```
+
+Push the helm chart
+
+```bash
+helm push PATH_TO_CHART/CHART.tgz oci://registry-1.docker.io/DOCKER_USER_NAME
+```
